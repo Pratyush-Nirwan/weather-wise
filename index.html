@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/98523245df.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+</head>
+<body>
+    <button id="github" class="fa-brands fa-github" ></button>
+    <div id="card">
+        <div id="search">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Enter location" id="search-box">
+            <button id="search-btn" class= "fa-solid fa-magnifying-glass"></button>
+        </div>
+        <div id="error404" style="display: none;">
+            <div id="image">
+                <img id="error-img" src="assets/404.svg" height="300px" width="auto">
+            </div>
+            <p>Oops invalid city name!</p>
+        </div>
+        <div id = "details" style="display: none;">
+            <div id="image">
+                <img id="card-img" src="" height="300px" width="auto">
+            </div>
+            <div id="temp-state">
+                <p id="temp">-°C</p>
+                <p id="state">---</p>
+            </div>
+            <div id="humidity-wind">
+                <div id="humidity">
+                    <i class="fa-solid fa-water"></i>
+                    <p id="humidity-p">-%<br>Humidity</p>
+                </div>
+                <div id="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <p id="wind-p">-Km/h<br>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>created by pratyush with ♡</p>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
