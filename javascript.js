@@ -18,7 +18,7 @@ search_box.addEventListener('keydown', (event) => {
 })
 search_btn.addEventListener('click',() => {
     const city = search_box.value;
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`).then(response => response.json()).then(json=>{
+    fetch(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`).then(response => response.json()).then(json=>{
         if(json.cod == '404'){
             card.style.animation="fade-out 0.2s forwards"
             setTimeout(() => {
