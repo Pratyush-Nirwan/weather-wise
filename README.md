@@ -1,6 +1,6 @@
 # Weather Application
-
-https://github.com/Pratyush-Nirwan/weather-website/assets/105948341/1e960a17-fb40-45c2-bb26-afa022898c8e
+![Screenshot of website](image1.png)
+![Screenshot of website](image2.png)
 
 This is a simple weather application that allows users to check the current weather conditions for a specified city. Users can enter the name of a city, and the application will display the temperature, weather description, humidity, and wind speed for that location. Additionally, the application provides weather condition icons for a more visual representation.
 
