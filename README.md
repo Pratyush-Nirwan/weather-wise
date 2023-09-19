@@ -1,6 +1,6 @@
 # Weather Application
-![Screenshot of website](image1.png)
-![Screenshot of website](image2.png)
+
+<video src="2023-09-17%2020-29-45.mp4" controls title="Title"></video>
 
 This is a simple weather application that allows users to check the current weather conditions for a specified city. Users can enter the name of a city, and the application will display the temperature, weather description, humidity, and wind speed for that location. Additionally, the application provides weather condition icons for a more visual representation.
 
