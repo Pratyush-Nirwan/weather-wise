@@ -9,7 +9,7 @@ const humidity = document.getElementById("humidity-p");
 const wind = document.getElementById("wind-p");
 const card = document.getElementById("card");
 
-const API_KEY= "6e988b9d7f53c3d96b1e3a01e13eba4d"
+const API_KEY= "YOUR_API_KEY"
 
 search_box.addEventListener('keydown', (event) => {
     if(event.key == "Enter"){
