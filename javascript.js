@@ -9,7 +9,7 @@ const humidity = document.getElementById("humidity-p");
 const wind = document.getElementById("wind-p");
 const card = document.getElementById("card");
 
-const API_KEY= "YOUR_API_KEY_HERE"
+const API_KEY= "6e988b9d7f53c3d96b1e3a01e13eba4d"
 
 search_box.addEventListener('keydown', (event) => {
     if(event.key == "Enter"){
@@ -23,7 +23,7 @@ search_box.addEventListener('touchend', function(event) {
 });
 search_btn.addEventListener('click',() => {
     const city = search_box.value;
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`).then(response => response.json()).then(json=>{
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`).then(response => response.json()).then(json=>{
         if(json.cod == '404'){
             card.style.animation="fade-out 0.2s forwards"
             setTimeout(() => {
