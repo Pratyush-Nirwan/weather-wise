@@ -1,0 +1,33 @@
+.cloud {
+    position: absolute;
+    animation: move 5s infinite alternate ease-in-out;
+}
+
+.c1 {
+    top: -20px;
+    right: -10px;
+}
+
+.c2 {
+    top: -10px;
+    right: 30px;
+    animation-delay: 1.5s;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.c3 {
+    top: -15px;
+    right: 50px;
+    animation-delay: 1.2s;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(10px);
+    }
+}
