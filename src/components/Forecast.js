@@ -20,18 +20,16 @@ import _50n from '../assets/icons/fill/openweathermap/50n.svg';
 const Forecast = (props) => {
     const renderForecastItems = () => {
         if (!props.weatherData || !props.weatherData.list) {
-            return null; // Return null if weatherData or list is null or undefined
+            return null;
         }
 
-        // Get today's date
         const today = new Date().toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', weekday: 'short' });
 
-        // Group forecasts by date
         const groupedForecasts = {};
         props.weatherData.list.forEach(forecast => {
             const date = new Date(forecast.dt_txt).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', weekday: 'short' });
 
-            if (date !== today) { // Filter out today's date
+            if (date !== today) {
                 if (!groupedForecasts[date]) {
                     groupedForecasts[date] = [];
                 }
@@ -39,13 +37,13 @@ const Forecast = (props) => {
             }
         });
 
-        // Filter and render forecast items for each unique date
+
         return Object.keys(groupedForecasts).map(date => {
             const dayForecasts = groupedForecasts[date].filter(forecast => forecast.weather[0].icon.endsWith('d'));
 
-            // Render only if there are daytime forecasts for the date
+
             if (dayForecasts.length > 0) {
-                const forecast = dayForecasts[0]; // Taking the first forecast for simplicity
+                const forecast = dayForecasts[0];
                 const weatherCondition = forecast.weather[0].main;
                 const weatherIcon = getWeatherIcon(forecast.weather[0].icon);
 
@@ -60,12 +58,10 @@ const Forecast = (props) => {
                     </div>
                 );
             } else {
-                return null; // Return null if there are no daytime forecasts for the date
+                return null;
             }
         });
     };
-
-    // Example weather icon mapping function
     const getWeatherIcon = (iconCode) => {
         switch (iconCode) {
             case '01d':
@@ -109,7 +105,7 @@ const Forecast = (props) => {
         }
     };
 
-    const defaultWeatherIcon = ''; // Provide a default icon if needed
+    const defaultWeatherIcon = '';
 
     return (
         <>
